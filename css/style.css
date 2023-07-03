@@ -1,0 +1,245 @@
+ html {
+     scroll-behavior: smooth;
+ }
+
+ /* #home {
+    transition: all 3s;
+  } */
+ .home-overlay {
+     position: absolute;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+     background: linear-gradient(to bottom, rgba(52, 51, 51, 0.348), rgba(53, 53, 54, 0.567));
+     /* clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); */
+ }
+ 
+#cards{
+    transition: all .9s;
+}
+ #cards:hover {
+     box-shadow: 0px 4px 10px 0 rgb(130, 130, 125) !important;
+ }
+
+ .fa-play{
+    position: absolute;
+        top: 49%;
+        right: 13%;
+        font-size: 37px;
+        margin: auto;
+        color: #40f400;
+ }
+ .playLink{
+    position: absolute;
+        top: 49%;
+        right: 13%;
+        font-size: 37px;
+        margin: auto;
+        background-color: #40f400;
+ }
+ #navbar{
+    background-color: #10b2cb12;
+    -webkit-backdrop-filter: blur(55px);
+    backdrop-filter: blur(15px);
+ }
+ #nav-logo{
+    transition: all 1s;
+ }
+ #nav-logo:hover{
+    /* transform: perspective(200px) rotateX(45deg); */
+    /* transform: skewX(-20deg); */
+transform: rotate3d(10, 2, 2, 45deg);
+}
+.nav-list1,.nav-list2,.nav-list3{
+    transition: all 1s;
+}
+.nav-list1:hover,.nav-list2:hover,.nav-list3:hover{
+transform: scale3d(1.1, 1.1, 1.1);
+}
+ 
+ @media (width >=1285px) {
+     #home {
+
+         /* background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url("../images/wa.jpg"); */
+         background-position: center;
+         background-size: cover;
+         background-repeat: no-repeat;
+         height: 98vh;
+         margin-top: -0px;
+         position: relative;
+         clip-path: polygon(0 0vh, 100% 0, 100% 100vh, 0 100%);
+         animation: fadeBackground 30s infinite;
+     }
+
+
+     #mainText {
+         font-size: 50px;
+         color: #e7e7e7;
+         z-index: 5;
+         font-family: 'Montserrat Alternates', sans-serif;
+         padding: 3px;
+         position: absolute;
+         top: 50%;
+         left: 54.4%;
+         transform: translate(5%, -100%);
+         background-color: rgba(85, 83, 83, 0.551);
+         border-radius: 20px;
+         width: 550px;
+         text-align: center;
+         text-transform: capitalize;
+     }
+
+     .button {
+         background-color: transparent;
+         border: 3px solid rgb(255, 255, 11);
+         padding: 5px 15px;
+         font-weight: 400;
+         font-size: 18px;
+         color: #e7e7e7;
+         border-radius: 5px;
+         transition: .5s ease-in-out;
+         position: absolute;
+         top: 53%;
+         left: 52%;
+         transform: translate(150%, 10%);
+     }
+
+
+ }
+
+ @media (width >=1116px) and (width <=1284px) {
+     #home {
+
+         /* background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url("../images/wa.jpg"); */
+         background-position: center;
+         background-size: cover;
+         background-repeat: no-repeat;
+         height: 98vh;
+         margin-top: -0px;
+         position: relative;
+         animation: fadeBackground 30s infinite;
+     }
+
+     #mainText {
+         font-size: 50px;
+         color: #e7e7e7;
+         z-index: 5;
+         font-family: 'Montserrat Alternates', sans-serif;
+         ;
+         position: absolute;
+         top: 50%;
+         left: 47.4%;
+         transform: translate(5%, -100%);
+         background-color: rgba(85, 83, 83, 0.182);
+         width: 550px;
+         text-align: center;
+         text-transform: capitalize;
+     }
+
+     .button {
+         background-color: transparent;
+         border: 3px solid rgb(255, 255, 11);
+         padding: 5px 15px;
+         font-weight: 400;
+         font-size: 18px;
+         color: #e7e7e7;
+         border-radius: 5px;
+         transition: .5s ease-in-out;
+         position: absolute;
+         top: 53%;
+         left: 44%;
+         transform: translate(150%, 10%);
+     }
+
+
+ }
+
+
+
+
+
+
+ @media (width <=1115px) {
+     #home {
+         /* background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url("../images/wa.jpg"); */
+         /* background-image: linear-gradient(), url("images/wa.jpg"); */
+         background-position: center;
+         background-size: cover;
+         object-fit: contain;
+         background-repeat: no-repeat;
+         height: 78vh;
+         position: relative;
+         animation: fadeBackground 30s infinite;
+
+     }
+
+     #mainText {
+         font-size: 38px;
+         color: #e7e7e7;
+         z-index: 5;
+         font-family: 'Alternates', sans-serif;
+         ;
+         font-weight: 800;
+         position: absolute;
+         top: 30%;
+         left: 50%;
+         transform: translate(-50%, -50%);
+         background-color: rgba(85, 83, 83, 0.427);
+         width: 350px;
+         text-align: center;
+         text-transform: capitalize;
+     }
+
+     .button {
+         background-color: transparent;
+         border: 3px solid rgb(255, 255, 11);
+         padding: 5px 15px;
+         font-weight: 400;
+         font-size: 18px;
+         color: #e7e7e7;
+         border-radius: 5px;
+         transition: .5s ease-in-out;
+         position: absolute;
+         top: 55%;
+         left: 48%;
+         transform: translate(-50%, -50%);
+
+     }
+ }
+
+
+
+ .button:hover {
+     background-color: rgb(255, 255, 11);
+     color: black;
+ }
+
+ @keyframes fadeBackground {
+
+     0%,
+     20% {
+         background-image: url("../images/1.jpg");
+
+         /* background-size: cover;
+            #home::after {
+                background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7));
+            } */
+
+     }
+
+     25%,
+     45% {
+         background-image: url("../images/2.jpg");
+     }
+
+     50%,
+     70% {
+         background-image: url("../images/3.jpg");
+     }
+
+     75%,
+     95% {
+         background-image: url("../images/4.jpg");
+     }
+ }
