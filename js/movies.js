@@ -1,6 +1,6 @@
 let row = document.getElementById('movie-row');
 let fetchAndDisplay = data => {
- for(let i = 0; i < data.results.length; i++){
+  for (let i = 0; i < data.results.length; i++) {
     let col = document.createElement('div');
     let card = document.createElement('div');
     let image = document.createElement('img');
@@ -34,7 +34,14 @@ let fetchAndDisplay = data => {
     Ul.classList.add('list-group', 'list-group-light', 'list-group-small');
     rating.classList.add('list-group-item', 'px-4', 'bg-dark', 'text-white');
     language.classList.add('list-group-item', 'px-4', 'bg-dark', 'text-white');
-    id.classList.add('list-group-item', 'px-4', 'bg-dark', 'text-white','card-id','visually-hidden');
+    id.classList.add(
+      'list-group-item',
+      'px-4',
+      'bg-dark',
+      'text-white',
+      'card-id',
+      'visually-hidden'
+    );
     releeaseDate.classList.add(
       'list-group-item',
       'px-4',
@@ -57,17 +64,17 @@ let fetchAndDisplay = data => {
     id.innerHTML = data.results[i].id;
     fetch(
       `https://api.themoviedb.org/3/movie/${data.results[i].id}?api_key=8f37545c884c451558817e9c14a10825&append_to_response=videos`
-    ).then(response => response.json())
+    )
+      .then(response => response.json())
       .then(ID => {
-        for(i=0;i<ID.videos.results.length;i++){
-          if(ID.videos.results[i].type === 'Trailer'){
-         playLink.href = `https://www.youtube.com/watch?v=${ID.videos.results[i].key}`; 
-         break;
+        for (i = 0; i < ID.videos.results.length; i++) {
+          if (ID.videos.results[i].type === 'Trailer') {
+            playLink.href = `https://www.youtube.com/watch?v=${ID.videos.results[i].key}`;
+            break;
+          }
         }
-      }
-         
-      })
-   
+      });
+
     // playLink.innerHTML = '';
 
     Ul.appendChild(rating);
@@ -84,8 +91,7 @@ let fetchAndDisplay = data => {
     col.appendChild(card);
     row.appendChild(col);
   }
-}
-
+};
 
 document.getElementById('Explore-Movies').addEventListener('click', () => {
   document.getElementById('search-results-text').innerHTML = 'Top Movies<br>';
@@ -109,15 +115,9 @@ document.getElementById('Explore-Movies').addEventListener('click', () => {
         var targetSection = document.getElementById('section-movies');
         targetSection.scrollIntoView({ behavior: 'smooth' });
       }, 500);
-      // fetch(
-      //   `https://api.themoviedb.org/3/movie/${id}?api_key=8f37545c884c451558817e9c14a10825&append_to_response=videos`
-      // ).then(response => response.json())
-      // .then(dataId => {
-        
-      // })
+     
       fetchAndDisplay(data);
 
-      // Add click event listener to playBtn buttons
       
     })
     .catch(err => console.error(err));
@@ -138,8 +138,7 @@ document.getElementById('search-button').addEventListener('click', function () {
         targetSection.scrollIntoView({ behavior: 'smooth' });
       }, 500);
       fetchAndDisplay(data);
-    })
-    
+    });
 });
 
 document
